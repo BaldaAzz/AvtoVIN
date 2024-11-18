@@ -6,23 +6,12 @@
     box-sizing: border-box;
     font-family: "Popins",sans-serif;
 }
-
-.logotip {
-    margin-top: -500px;
-    margin-left: -70px;
-    height: 10px;
-    width: 10px;   
-}
-
-.button-header {
-    text-align: center;
+.btn {
+    list-style-type: none;
     text-decoration: none;
-}
-
-.button-header .vin-number {
-    position: absolute;
-    width: 10%;
-    height: 45px;
+    color: green;
+    padding: 20px 200px;
+    font-size: 18px;
     background-color: white;
     border: none;
     outline: none;
@@ -32,55 +21,35 @@
     font-size: 16px;
     color: black;
     font-weight: 600;
-    margin: 0 auto;
-    display: block;
-    margin-top: -450px;
-    margin-left: -650px;
-    text-decoration: none;
 }
 
-.button-header .wfv {
-    position: absolute;
-    width: 10%;
-    height: 45px;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 45px;
+.btn .wfv {
+    text-decoration: none;
     cursor: pointer;
     font-size: 16px;
     color: black;
-    font-weight: 600;
-    margin: 0 auto;
-    display: block;
-    margin-top: -450px; 
-    margin-left: -200px; 
-    text-decoration: none;
 }
-
-.button-header .button-about {
-    position: absolute;
-    width: 7%;
-    height: 45px;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 45px;
+.btn .button-about{
+    text-decoration: none;
     cursor: pointer;
     font-size: 16px;
     color: black;
-    font-weight: 600;
-    margin: 0 auto;
-    display: block;
-    margin-top: -450px; 
-    margin-left: 500px; 
-    text-decoration: none;
 }
+.btn .vin-number{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+}
+
+.logo-img {
+    height: 150px;
+    width: 210px;
+}
+
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     min-height: 100vh;
     background: url('../img/fon1.jpg') no-repeat;
     background-size: cover;
@@ -88,7 +57,6 @@ body{
 }
 
 .wrapper{
-    margin-top: 120px;
     width: 400px;
     background-color: transparent;
     border: 2px solid rgb(255, 255, 255, .2);
@@ -97,6 +65,9 @@ body{
     color: white;
     border-radius: 25px;
     padding: 20px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
 }
 
 .wrapper .input-box {
