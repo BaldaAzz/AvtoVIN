@@ -1,8 +1,10 @@
-<nav style="display: flex; align-items: center;">
+<nav th:fragment="nav-menu" style="display: flex; align-items: center;">
     <li class = "logo-img">
-      <img src="../static/img/logo.png" alt="AvtoVIN" class="logo-img">
+        <a th:href="@{/}">
+            <img src="/img/logo.png" alt="AvtoVIN" class="logo-img">
+        </a>
     </li>       
-    <li class = "btn"><a class = "vin-number" href="#">Зачем нужен VIN номер?</a></li>       
-    <li class = "btn"><a class = "wfv" href="#">Где найти VIN</a></li>       
-    <li class = "btn"><a class = "button-about" href="#">О нас</a></li>              
-  </nav>
+    <li class = "btn"><a class = "vin-number" th:href="@{/vin_number}">Зачем нужен VIN номер?</a></li>
+    <li class = "btn"><a class = "wfv" th:href="@{/where_vin}">Где найти VIN</a></li>
+    <li class = "btn"><a class = "button-about" th:href="@{/about}">О нас</a></li>
+</nav>

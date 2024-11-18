@@ -1,37 +1,39 @@
 <!doctype html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <title>AvtoVIN</title>
     <link rel="stylesheet" href="mainmenu.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-      <link href="../static/css/mainmenu.css" rel="stylesheet">
+      <link href="/css/mainmenu.css" rel="stylesheet">
+      <link href="/css/nvigation.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav style="display: flex; align-items: center;">
-        <li class = "logo-img">
-          <img src="../static/img/logo.png" alt="AvtoVIN" class="logo-img">
-        </li>       
-        <li class = "btn"><a class = "vin-number" href="#">Зачем нужен VIN номер?</a></li>       
-        <li class = "btn"><a class = "wfv" href="#">Где найти VIN</a></li>       
-        <li class = "btn"><a class = "button-about" href="#">О нас</a></li>              
-      </nav>
+    <header th:insert="navigation">
     </header>
     <div class = "wrapper">
-        <div class ="search-vin">
-            <h2>Введите ваш VIN номер</h2>
-        </div>
-        <div class ="input-box">
-            <input type="text" placeholder="VIN" required>
-              <i class='bx bx-car'></i>
-        </div>
-        <div class = "text-vin">
-          <h6>Уникальный код транспортного средства, состоящий из 17 знаков</h6>
-        </div>
+            <div class ="search-vin">
+                <h2>Введите ваш VIN номер</h2>
+            </div>
+            <div class ="input-box">
+                <input type="text" name="vin" id="inputVin" placeholder="VIN" required>
+                  <i class='bx bx-car'></i>
+            </div>
+            <div class = "text-vin">
+              <h6>Уникальный код транспортного средства, состоящий из 17 знаков</h6>
+            </div>
 
-        <button type = "search" class ="button" > Поиск </button> 
+            <button type="button" id="submitBtn" onclick="openLink()">Получить</button>
     </div>
+    <script>
+        function openLink() {
+        const baseUrl = 'http://localhost:8080/';
+        const vin = document.querySelector('#inputVin').value;
+        if(vin.length != 17 && vin == null && vin == "") { return ;}
+        console.log(vin);
+        window.location.href = baseUrl + vin;
+        }
+    </script>
   </body>
 </html>
 

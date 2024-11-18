@@ -1,17 +1,14 @@
 <!doctype html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <title>Где найти VIN</title>
-    <link rel="stylesheet" href="../static/css/vin-number.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <link href="/css/vin-number.css" rel="stylesheet">
+      <link href="/css/nvigation.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-            <div>
-                <img src="../static/img/logo.png" alt="AvtoVIN" class="logo-img">
-            </div>
+    <header th:insert="navigation">
     </header>
     
     <div class ="wrapper">
@@ -20,9 +17,9 @@
                 <h1>О нас</h1>
             </div>
             <div class = "vin-info">
-                <h4>
+                <span>
                     Наш сервис создан для описания VIN номера вашего авто.
-                </h4>
+                </span>
             </div>
         </form>
     </div>
